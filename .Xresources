@@ -1,38 +1,58 @@
 ! special
-*.foreground:   #b5cdde
-*.background:   #0b1014
-*.cursorColor:  #b5cdde
+*.foreground:   #c0c5ce
+*.background:   #2b303b
+*.cursorColor:  #c0c5ce
 
 ! black
-*.color0:       #131b1f
-*.color8:       #c7acd6
+*.color0:       #2b303b
+*.color8:       #65737e
 
 ! red
-*.color1:       #1b232a
-*.color9:       #8dc0b5
+*.color1:       #bf616a
+*.color9:       #bf616a
 
 ! green
-*.color2:       #29353d
-*.color10:      #d6a96e
+*.color2:       #e0fbfc
+*.color10:      #006d77
 
 ! yellow
-*.color3:       #3d4d58
-*.color11:      #bb95cf
+*.color3:       #ebcb8b
+*.color11:      #ebcb8b
 
 ! blue
-*.color4:       #556b79
-*.color12:      #e180a0
+*.color4:       #8fa1b3
+*.color12:      #8fa1b3
 
 ! magenta
-*.color5:       #738fa2
-*.color13:      #71c2b1
+*.color5:       #b48ead
+*.color13:      #b48ead
 
 ! cyan
-*.color6:       #96b9d1
-*.color14:      #eabc83
+*.color6:       #96b5b4
+*.color14:      #96b5b4
 
 ! white
-*.color7:       #d8e4ed
-*.color15:      #7db6aa
+*.color7:       #c0c5ce
+*.color15:      #eff1f5
 
+! hiding the scrollBar on right
 URxvt.scrollBar: false
+
+! adding a nice padding between border and texts
+URxvt.internalBorder: 7
+
+
+! Setting fonts with special symbols
+#define font1         Noto Sans Mono
+#define font2         Cascadia Mono
+#define font3         DejaVu Sans Mono for Powerline
+#define font4         Noto Sans Mono CJK JP
+
+URxvt*letterSpace: 0
+URxvt*font:           xft:font1:pixelsize=12, xft:font2:pixelsize=12:minspace=false, xft:font3:pixelsize=12,xft:font4:pixelsize=12
+URxvt*boldFont:       xft:font1:bold:pixelsize=12, xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=12,xft:font4:pixelsize=12
+URxvt*italicFont:     xft:font1:italic:pixelsize=12, xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=12,xft:font4:pixelsize=12
+URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=12, xft:font2:pixelsize=12:minspace=False, xft:font3:pixelsize=12, xft:font4:pixelsize=12
+
+! Dont make it too high.. Everything will look zoomed. xD
+Xft.dpi: 110

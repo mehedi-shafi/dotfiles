@@ -40,7 +40,7 @@ URxvt.scrollBar: false
 
 ! adding a nice padding between border and texts
 URxvt.internalBorder: 7
-
+URxvt.borderColor: #2b303b
 
 ! Setting fonts with special symbols
 #define font1         Noto Sans Mono
@@ -56,3 +56,8 @@ URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=12, xft:font2:pixelsize=12
 
 ! Dont make it too high.. Everything will look zoomed. xD
 Xft.dpi: 110
+
+URxvt.perl-ext-common: selection-to-clipboard
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard

@@ -101,10 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
-export ANDROID_NDK_HOME="/run/media/shafi/nest_of_things/LinuxApps/android-ndk-r19b"
-export ANDROID_HOME="/run/media/shafi/nest_of_things/LinuxApps/sdk"
+# export ANDROID_NDK_HOME="/run/media/shafi/nest_of_things/LinuxApps/android-ndk-r19b"
+export ANDROID_HOME="file:///home/shafi/Android/Sdk"
 # export FLUTTER_PATH="/run/media/shafi/personal/APPLICATIONS/flutter/bin"
-export PATH=$PATH:$ANDROID_NDK_HOME
+# export PATH=$PATH:$ANDROID_NDK_HOME
 # export PATH=$PATH:$FLUTTER_PATH
 
 # exports for react native supports
@@ -115,9 +115,6 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 
 # source /home/shafi/anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
 
-rtxstation='codemarshal@10.10.10.200'
-rtxstationPublic='codemarshal@103.51.3.135'
-
 neofetch
 
 # adb='/run/media/shafi/personal/Android-sdk/platform-tools/adb'
@@ -125,6 +122,7 @@ neofetch
 # tesseract language pack directory
 # export TESSDATA_PREFIX="/run/media/shafi/materials/Python/tessdata"
 export LD_LIBRARY_PATH=/usr/local/lib/
-
+xrdb merge ~/.Xresources
 source /home/shafi/anaconda3/etc/profile.d/conda.sh
 alias GET_MY_IP="curl https://ipinfo.io/ip"
+alias cs="xclip -selection clipboard"

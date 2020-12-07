@@ -1,46 +1,46 @@
 ! special
-*.foreground:   #c0c5ce
-*.background:   #2b303b
-*.cursorColor:  #c0c5ce
+*.foreground:   #d1d8df
+*.background:   #060709
+*.cursorColor:  #d1d8df
 
 ! black
-*.color0:       #2b303b
-*.color8:       #65737e
+*.color0:       #0c0f10
+*.color8:       #78afd2
 
 ! red
-*.color1:       #bf616a
-*.color9:       #bf616a
+*.color1:       #16191c
+*.color9:       #ca94e3
 
 ! green
-*.color2:       #e0fbfc
-*.color10:      #006d77
+*.color2:       #262b2e
+*.color10:      #95b87b
 
 ! yellow
-*.color3:       #ebcb8b
-*.color11:      #ebcb8b
+*.color3:       #3d4348
+*.color11:      #c79852
 
 ! blue
-*.color4:       #8fa1b3
-*.color12:      #8fa1b3
+*.color4:       #59626a
+*.color12:      #9ec9e8
 
 ! magenta
-*.color5:       #b48ead
-*.color13:      #b48ead
+*.color5:       #7c8891
+*.color13:      #6cdfcb
 
 ! cyan
-*.color6:       #96b5b4
-*.color14:      #96b5b4
+*.color6:       #a4b3c0
+*.color14:      #99c4e1
 
 ! white
-*.color7:       #c0c5ce
-*.color15:      #eff1f5
+*.color7:       #dee3e8
+*.color15:      #cda46f
 
 ! hiding the scrollBar on right
 URxvt.scrollBar: false
 
 ! adding a nice padding between border and texts
 URxvt.internalBorder: 7
-URxvt.borderColor: #2b303b
+URxvt.borderColor: #060709
 
 ! Setting fonts with special symbols
 #define font1         Noto Sans Mono
@@ -59,5 +59,8 @@ Xft.dpi: 110
 
 URxvt.perl-ext-common: selection-to-clipboard
 
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+! URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+! URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped

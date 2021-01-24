@@ -108,10 +108,10 @@ export ANDROID_HOME="file:///home/shafi/Android/Sdk"
 # export PATH=$PATH:$FLUTTER_PATH
 
 # exports for react native supports
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$ANDROID_HOME/platform-tools:$PATH
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$ANDROID_HOME/platform-tools:$PATH
 
 # source /home/shafi/anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
 
@@ -126,3 +126,4 @@ xrdb merge ~/.Xresources
 source /home/shafi/anaconda3/etc/profile.d/conda.sh
 alias GET_MY_IP="curl https://ipinfo.io/ip"
 alias cs="xclip -selection clipboard"
+alias paste="xclip -out -selection clipboard"

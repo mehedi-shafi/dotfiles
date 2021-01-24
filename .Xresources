@@ -46,21 +46,33 @@ URxvt.borderColor: #060709
 #define font1         Noto Sans Mono
 #define font2         Cascadia Mono
 #define font3         DejaVu Sans Mono for Powerline
-#define font4         Noto Sans Mono CJK JP
+#define font4         Noto Sans Mono CJK JP Bengali
 
 URxvt*letterSpace: 0
-URxvt*font:           xft:font1:pixelsize=12, xft:font2:pixelsize=12:minspace=false, xft:font3:pixelsize=12,xft:font4:pixelsize=12
-URxvt*boldFont:       xft:font1:bold:pixelsize=12, xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=12,xft:font4:pixelsize=12
-URxvt*italicFont:     xft:font1:italic:pixelsize=12, xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=12,xft:font4:pixelsize=12
-URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=12, xft:font2:pixelsize=12:minspace=False, xft:font3:pixelsize=12, xft:font4:pixelsize=12
+URxvt*font:           xft:font1:pixelsize=12,xft:font2:pixelsize=12:minspace=false,xft:font3:pixelsize=12,xft:font4:pixelsize=12
+URxvt*boldFont:       xft:font1:bold:pixelsize=12,xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=12,xft:font4:pixelsize=12
+URxvt*italicFont:     xft:font1:italic:pixelsize=12,xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=12,xft:font4:pixelsize=12
+URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=12,xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=12,xft:font4:pixelsize=12
 
 ! Dont make it too high.. Everything will look zoomed. xD
 Xft.dpi: 110
 
-URxvt.perl-ext-common: selection-to-clipboard
+URxvt.perl-ext-common: selection-to-clipboard,tabbed,resize-font
 
-! URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-! URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+! URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+! enable scrolling in secondary screen instead of whole buffer
+URxvt.secodaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.secondaryWheel: 1
+
+
+! Enable tabs and configure tabs
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0

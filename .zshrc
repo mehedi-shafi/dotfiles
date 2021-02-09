@@ -127,3 +127,4 @@ source /home/shafi/anaconda3/etc/profile.d/conda.sh
 alias GET_MY_IP="curl https://ipinfo.io/ip"
 alias cs="xclip -selection clipboard"
 alias paste="xclip -out -selection clipboard"
+source /etc/profile.d/vte.sh

@@ -128,3 +128,13 @@ alias GET_MY_IP="curl https://ipinfo.io/ip"
 alias cs="xclip -selection clipboard"
 alias paste="xclip -out -selection clipboard"
 source /etc/profile.d/vte.sh
+
+
+searchAll() {
+  find / -name "$1" -type f 2>/dev/null | xargs grep "$1"
+}
+
+search(){
+  find . -name "$1" -type f 2>/dev/null | xargs grep "$1"
+}
+

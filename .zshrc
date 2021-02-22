@@ -138,3 +138,5 @@ search(){
   find . -name "$1" -type f 2>/dev/null | xargs grep "$1"
 }
 
+alias line-count="git ls-files | while read f; do git blame -w -M -C -C --line-porcelain "$f" | grep -I '^author '; done | sort -f | uniq -ic | sort -n"
+

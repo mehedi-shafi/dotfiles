@@ -1,0 +1,36 @@
+session: tkdc
+root: /run/media/shafi/Codes/Python
+
+stop:
+  - echo "GOOD BYE"
+
+windows:
+  - name: basic
+    root: tkdc
+    layout: main-vertical
+    commands:
+      - git fetch
+      - conda activate venv/
+      - clear
+      - is_reachable 10.9.0.75
+      - is_reachable 10.9.0.41
+      - is_reachable gitlab.surecashbd.com
+      - git status
+      - code .
+
+    panes:
+      - type: vertical
+        root: .
+        commands:
+          - clear
+          - pwd
+          - conda activate venv/
+          - ./run.sh
+          
+  - name: database
+    root: ~
+    manual: false
+    layout: main-vertical
+    commands:
+      - clear
+      - psql tkdc -U shafi

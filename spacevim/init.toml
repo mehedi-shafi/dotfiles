@@ -1,12 +1,12 @@
 # All SpaceVim option below [option] section
 [options]
     bootstrap_before = 'shaficustom#before'
-    # bootstrap_after = 'shaficustom#after'
+    bootstrap_after = 'shaficustom#after'
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     colorscheme = 'nord'
-    colorscheme_bg = 'light'
-    enable_guicolors = true
+    colorscheme_bg = 'dark'
+    enable_guicolors = false
     statusline_separator = "arrow"
     statusline_inactive_separator = "arrow"
     buffer_index_type = 4
@@ -16,7 +16,7 @@
     default_indent = 4
     expand_tab = false
     enable_neomake = false
-    enable_ale = true
+    enable_ale = false
     filemanager = "nerdtree"
     filetree_direction = 'left'
     filetree_show_hidden = true
@@ -30,11 +30,12 @@
   merged = 0
 
 # Enable autocomplete layer
-[[layers]]
-    name = 'autocomplete'
-    autocomplete_method = 'deoplete'
-    auto_completion_return_key_behavior = 'complete'
-    auto_completion_tab_key_behavior = 'smart'
+# [[layers]]
+#     name = 'autocomplete'
+#     autocomplete_method = 'ycm'
+#     auto_completion_return_key_behavior = 'complete'
+#     auto_completion_tab_key_behavior = 'smart'
+# 	auto_completion_delay = 1000
 
 [[layers]]
 	name = 'checkers'

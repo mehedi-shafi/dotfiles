@@ -1,7 +1,11 @@
 session: tkdc
 root: /run/media/shafi/Codes/Python
 
+before_start:
+  - docker start postgres-dev
+
 stop:
+  - docker stop postgres-dev
   - echo "GOOD BYE"
 
 windows:
@@ -16,8 +20,7 @@ windows:
       - is_reachable 10.9.0.41
       - is_reachable gitlab.surecashbd.com
       - git status
-      - code .
-
+      - vim .
     panes:
       - type: vertical
         root: .
@@ -26,6 +29,20 @@ windows:
           - pwd
           - conda activate venv/
           - ./run.sh
+
+  - name: externals
+    root: ../tkdc-external-scripts
+    manual: false
+    layout: main-vertical
+    commands:
+      - clear
+      - vim .
+    panes:
+      - type: vertical
+        root: .
+        commands:
+          - clear
+
           
   - name: database
     root: ~
@@ -34,3 +51,19 @@ windows:
     commands:
       - clear
       - psql tkdc -U shafi
+
+  - name: ssh
+    root: /home/shafi/
+    manual: false
+    layout: main-vertical
+    commands:
+      - ssh tkdc-staging
+    panes:
+      - type: vertical
+        root: /home/shafi/credentials
+        commands:
+          - clear
+          - cat tkdc_all_credentials.md
+
+
+

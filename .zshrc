@@ -102,7 +102,11 @@ source $ZSH/oh-my-zsh.sh
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 # export ANDROID_NDK_HOME="/run/media/shafi/nest_of_things/LinuxApps/android-ndk-r19b"
-export ANDROID_HOME="file:///home/shafi/Android/Sdk"
+export ANDROID_SDK_HOME='/run/media/shafi/nest_of_things/LinuxApps/as-files/.android'
+export GRADLE_USER_HOME='/run/media/shafi/nest_of_things/LinuxApps/gradle'
+export PATH=$PATH:$ANDROID_SDK_HOME
+export PATH=$PATH:$GRADLE_USER_HOME
+
 # export FLUTTER_PATH="/run/media/shafi/personal/APPLICATIONS/flutter/bin"
 # export PATH=$PATH:$ANDROID_NDK_HOME
 # export PATH=$PATH:$FLUTTER_PATH
@@ -144,3 +148,5 @@ EDITOR=vim
 function is_reachable {
   ping -c 1 -W 1 $1 &>> /dev/null && echo "$1 reachable" || echo "$1 not reachable"
 }
+
+export TERM=xterm-256color

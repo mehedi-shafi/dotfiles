@@ -29,13 +29,17 @@
   repo = "mhartington/oceanic-next"
   merged = 0
 
+[[layers]]
+    name = 'lang#python'
+    filetypes = ["python"]
+
 # Enable autocomplete layer
-# [[layers]]
-#     name = 'autocomplete'
-#     autocomplete_method = 'ycm'
-#     auto_completion_return_key_behavior = 'complete'
-#     auto_completion_tab_key_behavior = 'smart'
-# 	auto_completion_delay = 1000
+[[layers]]
+    name = 'autocomplete'
+    autocomplete_method = 'ycm'
+    auto_completion_return_key_behavior = 'complete'
+    auto_completion_tab_key_behavior = 'smart'
+ 	auto_completion_delay = 20
 
 [[layers]]
 	name = 'checkers'
@@ -54,9 +58,6 @@
 [[layers]]
     name = 'fiemanager'
 
-[[layers]]
-    name = 'lang#python'
-    filetypes = ["python"]
 
 [[layers]]
 	name = 'git'

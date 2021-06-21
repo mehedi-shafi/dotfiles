@@ -31,7 +31,7 @@ windows:
           - ./run.sh
 
   - name: externals
-    root: ../tkdc-external-scripts
+    root: tkdc-external-scripts
     manual: false
     layout: main-vertical
     commands:

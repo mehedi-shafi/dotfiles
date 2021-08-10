@@ -103,6 +103,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 
 # export ANDROID_NDK_HOME="/run/media/shafi/nest_of_things/LinuxApps/android-ndk-r19b"
 export ANDROID_SDK_HOME='/run/media/shafi/nest_of_things/LinuxApps/as-files/.android'
+export ANDROID_AVD_HOME='/run/media/shafi/nest_of_things/LinuxApps/as-files/.avd'
 export GRADLE_USER_HOME='/run/media/shafi/nest_of_things/LinuxApps/gradle'
 export PATH=$PATH:$ANDROID_SDK_HOME
 export PATH=$PATH:$GRADLE_USER_HOME
@@ -149,4 +150,13 @@ function is_reachable {
   ping -c 1 -W 1 $1 &>> /dev/null && echo "$1 reachable" || echo "$1 not reachable"
 }
 
+function get_token {
+        curl --request POST \
+     --url "http://$1/auth/token/login" \
+     --header 'content-type: multipart/form-data; boundary=---011000010111000001101001' \
+     --form username=$2 \
+     --form password=$3 | jq -r '.auth_token' | cs
+}
+
 export TERM=xterm-256color
+export TRILIUM_DATA_DIR=/run/media/shafi/nest_of_things/Personal/trilium-data

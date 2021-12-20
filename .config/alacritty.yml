@@ -8,64 +8,55 @@ window:
     x: 15
     y: 15
 
-    dynamic_padding:  true
-    decoration: none
+  dynamic_padding : true
+  decorations: none
 
 font:
   normal:
-    family: Cascadia Code
-
-  bold:
-    family: Source Code Pro Bold
-
-  italic:
-    family: Source Code Pro Italic
-
-  bold_italic:
-    family: Source Code Pro Demi Bold Italic
+    family: "MesloLGS NF"
 
   size: 10
 
 colors:
   # Default colors
   primary:
-    background: '#060709'
-    foreground: '#d1d8df'
+    background: "#060709"
+    foreground: "#d1d8df"
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '#060709'
-    cursor: '#d1d8df'
+    text: "#060709"
+    cursor: "#d1d8df"
 
   # Normal colors
   normal:
-    black:   '#0c0f10'
-    red:     '#ba181b'
-    green:   '#386641'
-    yellow:  '#faf0ca'
-    blue:    '#118ab2'
-    magenta: '#840032'
-    cyan:    '#15616d'
-    white:   '#dee3e8'
+    black: "#0c0f10"
+    red: "#ba181b"
+    green: "#386641"
+    yellow: "#faf0ca"
+    blue: "#118ab2"
+    magenta: "#840032"
+    cyan: "#15616d"
+    white: "#dee3e8"
 
   # Bright colors
   bright:
-    black:   '#78afd2'
-    red:     '#9e2a2b'
-    green:   '#95b87b'
-    yellow:  '#c79852'
-    blue:    '#9ec9e8'
-    magenta: '#6cdfcb'
-    cyan:    '#99c4e1'
-    white:   '#dee3e8'
+    black: "#78afd2"
+    red: "#9e2a2b"
+    green: "#95b87b"
+    yellow: "#c79852"
+    blue: "#9ec9e8"
+    magenta: "#6cdfcb"
+    cyan: "#99c4e1"
+    white: "#dee3e8"
 
   indexed_colors:
-    - { index: 16, color: '0xf78c6c' }
-    - { index: 17, color: '0xff5370' }
-    - { index: 18, color: '0x303030' }
-    - { index: 19, color: '0x353535' }
-    - { index: 20, color: '0xb2ccd6' }
-    - { index: 21, color: '0xeeffff' }
+    - { index: 16, color: "0xf78c6c" }
+    - { index: 17, color: "0xff5370" }
+    - { index: 18, color: "0x303030" }
+    - { index: 19, color: "0x353535" }
+    - { index: 20, color: "0xb2ccd6" }
+    - { index: 21, color: "0xeeffff" }
 
 background_opacity: 1
 
@@ -75,9 +66,8 @@ background_opacity: 1
 #   unfocused_hollow: false
 
 live_config_reload: true
-                 
-key_bindings:
 
+key_bindings:
   - { key: Key0, mods: Control, action: ResetFontSize }
 
   - { key: Equals, mods: Control, action: IncreaseFontSize }

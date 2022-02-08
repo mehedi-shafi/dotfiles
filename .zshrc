@@ -170,3 +170,15 @@ export TRILIUM_DATA_DIR=/run/media/shafi/nest_of_things/Personal/trilium-data
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# re-touch kazam made video
+# Video produced by kazam is often not playable using video players
+function retouch_kazam { 
+	ffmpeg -y -i $1 -c:v libx264 -c:a aac -strict experimental -tune fastdecode -pix_fmt yuv420p -b:a 192k -ar 48000 "temp_$1_output_file.mp4"
+	mv "temp_$1_output_file.mp4" $1
+}

@@ -9,13 +9,15 @@ window:
     y: 15
 
   dynamic_padding : true
-  decorations: none
+  # decorations: none
+
+  opacity: 1
 
 font:
   normal:
-    family: "MesloLGS NF"
+    family: "MesloLGS Nerd Font"
 
-  size: 10
+  size: 12
 
 colors:
   # Default colors
@@ -58,7 +60,7 @@ colors:
     - { index: 20, color: "0xb2ccd6" }
     - { index: 21, color: "0xeeffff" }
 
-background_opacity: 1
+# background_opacity: 1
 
 # cursor:
 #   style: Underline

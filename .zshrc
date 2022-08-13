@@ -5,11 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+eval $(/opt/homebrew/bin/brew shellenv)
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/shafi/.oh-my-zsh"
+export ZSH="/Users/shopup/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -112,8 +114,8 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 export ANDROID_SDK_HOME='/run/media/shafi/nest_of_things/LinuxApps/as-files/.android'
 export ANDROID_AVD_HOME='/run/media/shafi/nest_of_things/LinuxApps/as-files/.avd'
 export GRADLE_USER_HOME='/run/media/shafi/nest_of_things/LinuxApps/gradle'
-export PATH=$PATH:$ANDROID_SDK_HOME
-export PATH=$PATH:$GRADLE_USER_HOME
+# export PATH=$PATH:$ANDROID_SDK_HOME
+# export PATH=$PATH:$GRADLE_USER_HOME
 
 # export FLUTTER_PATH="/run/media/shafi/personal/APPLICATIONS/flutter/bin"
 # export PATH=$PATH:$ANDROID_NDK_HOME
@@ -126,6 +128,8 @@ export PATH=$PATH:$GRADLE_USER_HOME
 # export PATH=$ANDROID_HOME/platform-tools:$PATH
 
 # source /home/shafi/anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
+# darwin
+# source /Users/shopup/opt/anaconda3/etc/profile.d/conda.sh
 
 neofetch
 
@@ -134,13 +138,12 @@ neofetch
 # tesseract language pack directory
 # export TESSDATA_PREFIX="/run/media/shafi/materials/Python/tessdata"
 export LD_LIBRARY_PATH=/usr/local/lib/
-xrdb merge ~/.Xresources
-source /home/shafi/anaconda3/etc/profile.d/conda.sh
+# xrdb merge ~/.Xresources
+# source /home/shafi/anaconda3/etc/profile.d/conda.sh
 alias GET_MY_IP="curl https://ipinfo.io/ip"
 alias cs="xclip -selection clipboard"
 alias paste="xclip -out -selection clipboard"
-source /etc/profile.d/vte.sh
-
+# source /etc/profile.d/vte.sh
 
 searchAll() {
   find / -name "$1" -type f 2>/dev/null | xargs grep "$1"
@@ -182,3 +185,23 @@ function retouch_kazam {
 	ffmpeg -y -i $1 -c:v libx264 -c:a aac -strict experimental -tune fastdecode -pix_fmt yuv420p -b:a 192k -ar 48000 "temp_$1_output_file.mp4"
 	mv "temp_$1_output_file.mp4" $1
 }
+# alias python=python3
+# alias pip=pip3
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
+
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+export LOCAL_DEV_PATH="${HOME}/dev"
+
+eval "$(ssh-agent -s)" && ssh-add -K ~/.ssh/id_github
+# update GOPRIVATE if accessing go libraries from PRIVATE repos.
+export GOPRIVATE="github.com/shopuptech"
+export GOPATH=~/go
+export GOBIN="${GOPATH}/bin"
+export PATH="${PATH}:${GOBIN}"
+
+# alias ibrew="arch -x86_64 brew"
+# export PATH="/usr/local/homebrew/bin:$PATH"
+
+
